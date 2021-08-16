@@ -1,6 +1,13 @@
 #! /bin/bash
 #  Description: 注意这个只在master上面执行
 
+# 这几条环境变量的命令需要手动执行
+# export MASTER_IP=192.168.66.145
+# export APISERVER_NAME=k8s.master
+# export POD_SUBNET=172.18.0.1/16
+# echo "${MASTER_IP}        ${APISERVER_NAME}" >> /etc/hosts
+
+
 cat <<EOF >./kubeadm-config.yaml 
 apiVersion: kubeadm.k8s.io/v1beta2 
 kind: ClusterConfiguration 
