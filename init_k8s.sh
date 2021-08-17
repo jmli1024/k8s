@@ -7,7 +7,7 @@
 # export POD_SUBNET=172.18.0.1/16
 # echo "${MASTER_IP}        ${APISERVER_NAME}" >> /etc/hosts
 
-
+rm -f kubeadm-config.yaml
 cat <<EOF >./kubeadm-config.yaml 
 apiVersion: kubeadm.k8s.io/v1beta2 
 kind: ClusterConfiguration 
